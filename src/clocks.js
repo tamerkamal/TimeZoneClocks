@@ -21,8 +21,8 @@ function displayCLocks() {
     let indianTime = getCurrentTime('Indian', 'Asia/Kolkata');
 
     document.getElementById('dutchTZone').innerHTML = dutchTime;
-    document.getElementById('egyptTZone').innerHTML = egyptTime;
-    document.getElementById('indiaTZone').innerHTML = indianTime;
+    document.getElementById('egyptianTZone').innerHTML = egyptTime;
+    document.getElementById('indianTZone').innerHTML = indianTime;
 }
 
 

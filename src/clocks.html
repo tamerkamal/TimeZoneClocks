@@ -5,38 +5,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Timezones</title>
+
+    <link rel="stylesheet" href="./clocks.css">
 </head>
 
 <body>
 
-    <h2 class="title">Timezone Clocks </h2>
-
     <div class="container">
 
-        <div class="row">
+        <table id="clocksTableId">
 
-            <div class="timebox">
-                <h3 class="india">Dutch</h3>
-                <p class="time" id="dutchTZone"></p>
-            </div>
+            <thead>
+                <tr>
+                    <th>Country</th>
+                    <th>TimeZone</th>
+                </tr>
+            </thead>
 
-            <div class="timebox">
-                <h3 class="india">Egyptian</h3>
-                <p class="time" id="egyptTZone"></p>
-            </div>
+            <tbody>
+                <tr class="timebox">
+                    <td>
+                        <b class="dutch">Netherlands</b>
+                    </td>
+                    <td>
+                        <b class="time" id="dutchTZone"></b>
+                    </td>
+                </tr>
 
-            <div class="timebox">
-                <h3 class="india">Indian</h3>
-                <p class="time" id="indiaTZone"></p>
-            </div>
+                <tr class="timebox">
+                    <td>
+                        <b class="egyptian">Egypt</b>
+                    </td>
+                    <td>
+                        <b class="time" id="egyptianTZone"></b>
+                    </td>
+                </tr>
 
-        </div>
+                <tr class="timebox">
+                    <td>
+                        <b class="indian">India</b>
+                    </td>
+                    <td>
+                        <b class="time" id="indianTZone"></b>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
     </div>
 
-</body>
+    <script src="./clocks.js"></script>
 
-<script src="./clocks.js"></script>
+</body>
 
 </html>
