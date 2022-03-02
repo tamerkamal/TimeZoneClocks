@@ -1,13 +1,14 @@
-#clocksTableId {
+  #clocksTableId {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    width: auto;
+    /*width: auto;*/
   }
-  
-  #clocksTableId td, #clocksTableId th {
-    border: 1px solid black;
-    padding: 15px;
-  }
+
+    #clocksTableId td, #clocksTableId th {
+        border: 1px solid black;
+        text-align: center;
+        padding: 15px;
+    }
   
   /* #clocksTableId tr:nth-child(even){background-color: #f2f2f2;} */
   
@@ -16,7 +17,13 @@
   #clocksTableId th {
     padding-top: 12px;
     padding-bottom: 12px;
-    text-align: left;
+    text-align: center;
     background-color: #04AA6D;
     color: white;
   }
+
+.tableCenter {
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
