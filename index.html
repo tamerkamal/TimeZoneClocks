@@ -5,57 +5,96 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Timezones</title>
 
+    <!-- styles -->
     <link rel="stylesheet" href="./clocks.css">
+
+    <!-- scripts -->
+    <script defer src="./clocks.js"></script>
 </head>
 
 <body>
 
-    <div class="container">
+    <section>
+        <div class="container">
 
-        <table id="clocksTableId" class="tableCenter">
+            <table class="clocksTable tableCenter">
 
-            <thead>
-                <tr>
-                    <th>Country</th>
-                    <th>TimeZone</th>
-                </tr>
-            </thead>
+                <thead>
+                    <tr>
+                        <th>Country</th>
+                        <th>TimeZone</th>
+                    </tr>
+                </thead>
 
-            <tbody>
-                <tr class="timebox">
-                    <td>
-                        <b class="dutch">Netherlands</b>
-                    </td>
-                    <td>
-                        <b class="time" id="dutchTZone"></b>
-                    </td>
-                </tr>
+                <tbody>
+                    <tr class="timebox">
+                        <td>
+                            <b class="dutch">Netherlands</b>
+                        </td>
+                        <td>
+                            <b class="time" id="dutchTZone"></b>
+                        </td>
+                    </tr>
 
-                <tr class="timebox">
-                    <td>
-                        <b class="egyptian">Egypt</b>
-                    </td>
-                    <td>
-                        <b class="time" id="egyptianTZone"></b>
-                    </td>
-                </tr>
+                    <tr class="timebox">
+                        <td>
+                            <b class="egyptian">Egypt</b>
+                        </td>
+                        <td>
+                            <b class="time" id="egyptianTZone"></b>
+                        </td>
+                    </tr>
 
-                <tr class="timebox">
-                    <td>
-                        <b class="indian">India</b>
-                    </td>
-                    <td>
-                        <b class="time" id="indianTZone"></b>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                    <tr class="timebox">
+                        <td>
+                            <b class="indian">India</b>
+                        </td>
+                        <td>
+                            <b class="time" id="indianTZone"></b>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
 
-    </div>
+    <section>
+        <form action="" id="timeCoversionFormId">
 
-    <script src="./clocks.js"></script>
+            <table class="clocksTable tableCenter">
+
+                <thead>
+                    <tr>
+                        <th>Netherlands</th>
+                        <th>Egypt</th>
+                        <th>India</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>
+                            <select name="" id=""></select>
+                            <select name="" id=""></select>
+                        </td>
+                        <td>
+                            <select name="" id=""></select>
+                            <select name="" id=""></select>
+                        </td>
+                        <td>
+                            <select name="" id=""></select>
+                            <select name="" id=""></select>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </form>
+    </section>
 
 </body>
 
