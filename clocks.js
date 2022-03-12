@@ -3,6 +3,7 @@ window.onload = () => {
     setInterval(displayCLocks, 1000);
     appendHrs();
     appendMins();
+    appendAM_PM();
 }
 
 function getCurrentTime(nationality, timeZone,) {
@@ -64,6 +65,17 @@ function appendMins() {
             let option = createOption(j, j);
             mnsDropDowns.item(i).appendChild(option);
         }
+    }
+}
+
+function appendAM_PM() {
+    let apDropdowns = document.getElementsByClassName('ap');
+
+    for (let i = 0; i < apDropdowns.length; i++) {
+        let option1 = createOption("AM", "AM");
+        let option2 = createOption("PM", "PM");
+        apDropdowns.item(i).appendChild(option1);
+        apDropdowns.item(i).appendChild(option2);
     }
 }
 
