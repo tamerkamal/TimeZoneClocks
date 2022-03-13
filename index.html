@@ -18,95 +18,111 @@
 <body>
 
     <section>
-        <div class="container">
 
-            <table class="clocksTable tableCenter">
+        <table class="clocksTable tableCenter">
 
-                <thead>
-                    <tr>
-                        <th>Country</th>
-                        <th>TimeZone</th>
-                    </tr>
-                </thead>
+            <thead>
+                <tr>
+                    <th>Country</th>
+                    <th>TimeZone</th>
+                </tr>
+            </thead>
 
-                <tbody>
-                    <tr class="timebox">
-                        <td>
-                            <b class="dutch">Netherlands</b>
-                        </td>
-                        <td>
-                            <b class="time" id="dutchTZone"></b>
-                        </td>
-                    </tr>
+            <tbody>
 
-                    <tr class="timebox">
-                        <td>
-                            <b class="egyptian">Egypt</b>
-                        </td>
-                        <td>
-                            <b class="time" id="egyptianTZone"></b>
-                        </td>
-                    </tr>
+                <tr class="timebox">
+                    <td>
+                        <b class="indian">India</b>
+                    </td>
+                    <td>
+                        <b class="time" id="indianTZone"></b>
+                    </td>
+                </tr>
 
-                    <tr class="timebox">
-                        <td>
-                            <b class="indian">India</b>
-                        </td>
-                        <td>
-                            <b class="time" id="indianTZone"></b>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+                <tr class="timebox">
+                    <td>
+                        <b class="dutch">Netherlands</b>
+                    </td>
+                    <td>
+                        <b class="time" id="dutchTZone"></b>
+                    </td>
+                </tr>
+
+                <tr class="timebox">
+                    <td>
+                        <b class="egyptian">Egypt</b>
+                    </td>
+                    <td>
+                        <b class="time" id="egyptianTZone"></b>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </section>
 
     <section>
+
         <form action="" id="timeCoversionFormId">
 
             <table class="clocksTable tableCenter">
 
                 <thead>
                     <tr>
+                        <th>India</th>
                         <th>Netherlands</th>
                         <th>Egypt</th>
-                        <th>India</th>
                     </tr>
                 </thead>
 
                 <tbody>
                     <tr>
+
                         <td>
-                            <select name="" class="hrs" id="h_NId"> </select>
+                            <select class="hrs" id="h_IId" onchange="onSelectedTimeChange('Asia/Kolkata')">
+                                <option value="">H</option>
+                            </select>
 
-                            <select name="" class="mns" id="m_NId"></select>
+                            <select class="mns" id="m_IId" onchange="onSelectedTimeChange('Asia/Kolkata')">
+                                <option value="">M</option>
+                            </select>
 
-                            <select name="" class="ap" id="ap_NId"> </select>
+                            <select class="ap" id="ap_IId" onchange="onSelectedTimeChange('Asia/Kolkata')">
+                                <option value="">A/P</option>
+                            </select>
                         </td>
 
                         <td>
-                            <select name="" class="hrs" id="h_EId"></select>
+                            <select class="hrs" id="h_NId" onchange="onSelectedTimeChange('Europe/Amsterdam')">
+                                <option value="">H</option>
+                            </select>
 
-                            <select name="" class="mns" id="m_EId"></select>
+                            <select class="mns" id="m_NId" onchange="onSelectedTimeChange('Europe/Amsterdam')">
+                                <option value="">M</option>
+                            </select>
 
-                            <select name="" class="ap" id="ap_EId"> </select>
+                            <select class="ap" id="ap_NId" onchange="onSelectedTimeChange('Europe/Amsterdam')">
+                                <option value="">A/P</option>
+                            </select>
                         </td>
 
                         <td>
-                            <select name="" class="hrs" id="h_IId"></select>
+                            <select class="hrs" id="h_EId" onchange="onSelectedTimeChange('Africa/Cairo')">
+                                <option value="">H</option>
+                            </select>
 
-                            <select name="" class="mns" id="m_IId"></select>
+                            <select class="mns" id="m_EId" onchange="onSelectedTimeChange('Africa/Cairo')">
+                                <option value="">M</option>
+                            </select>
 
-                            <select name="" class="ap" id="ap_IId"> </select>
+                            <select class="ap" id="ap_EId" onchange="onSelectedTimeChange('Africa/Cairo')">
+                                <option value="">A/P</option>
+                            </select>
                         </td>
                     </tr>
-
                 </tbody>
             </table>
-
         </form>
     </section>
-
 </body>
 
 </html>
