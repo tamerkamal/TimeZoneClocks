@@ -1,1 +1,1 @@
-# TimeZone Clocks (Netherlands,Egypt,India)
+# TimeZone Clocks and Conversions (India, Netherlands,Egypt)
