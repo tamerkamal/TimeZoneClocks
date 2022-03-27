@@ -56,6 +56,11 @@ window.onload = () => {
 
 //#region Main Methods
 
+generateTimezoneCLocks(TimezonesArray)
+{
+
+}
+
 function onSelectedTimeChange(timezone) {
 
     let hr_EuropeAmsterdam = document.getElementById(Hr_N_Id).value;
