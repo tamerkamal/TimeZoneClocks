@@ -41,24 +41,16 @@ const I_Eg_TimeDiffInHrs = -Eg_I_TimeDiffInHrs;
 
 //#endregion
 
-//#region onload
+//#region Main Methods
 
-window.onload = () => {
-
-    displayCLocks();
-    setInterval(displayCLocks, 1000);
+function generateTimezoneCLocks(timezonesArray) {
+    debugger;
+    displayCLocks(timezonesArray);
+    setInterval(() => { displayCLocks(timezonesArray); }, 1000);
     appendHrs();
     appendMins();
     appendAM_PM();
-}
-
-//#endregion
-
-//#region Main Methods
-
-generateTimezoneCLocks(TimezonesArray)
-{
-
+    console.log(timezonesArray);
 }
 
 function onSelectedTimeChange(timezone) {
@@ -258,7 +250,7 @@ function addHoursToDate(objDate, intHours) {
     return newDateObj;
 }
 
-function displayCLocks() {
+function displayCLocks(timezonesArray) {
 
     let dutchTime = getCurrentTime(EuropeAmsterdam, H12);
     let egyptTime = getCurrentTime(AfricaCairo, H12);
@@ -267,6 +259,37 @@ function displayCLocks() {
     document.getElementById(DutchTZone).innerHTML = dutchTime;
     document.getElementById(EgyptianTZone).innerHTML = egyptTime;
     document.getElementById(IndianTZone).innerHTML = indianTime;
+}
+
+function createCountryTimeZoneTable(timezonesArray) {
+    //  CREATE HTML TABLE
+    let table = document.createElement("table");
+    table.id = "countryTimeZoneTableId;"
+    var tr = document.createElement('tr'); // Header row
+    for (var j = 0; j < 8; j++) {
+
+        var th = document.createElement('th'); //column
+        var text = document.createTextNode(headerList[j]); //cell
+        th.appendChild(text);
+        tr.appendChild(th);
+    }
+
+    table.appendChild(tr);
+    for (var i = 1; i < 2; i++) {
+
+        var tr = document.createElement('tr'); // row
+        for (var j = 0; j < 8; j++) {
+
+            var td = document.createElement('td'); //column
+            var text = document.createTextNode(sqlArray[j]); //cell
+            td.appendChild(text);
+            tr.appendChild(td);
+        }
+
+        table.appendChild(tr);
+    }
+    document.getElementById('single_fine_view').appendChild(table);
+
 }
 
 function Convert_h12_To_h24(time_h12) {

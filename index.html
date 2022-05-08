@@ -12,21 +12,14 @@
     <link rel="stylesheet" href="./clocks.css">
 
     <!-- scripts -->
-    <script defer src="./clocks.js"></script>
+
 </head>
 
-<body>
+<body onload="generateTimezoneCLocks(['Europe/Amsterdam','Africa/Cairo','Asia/Kolkata']);">
 
     <section>
 
-        <div class="container" onload="generateTimezoneCLocks(['Europe/Amsterdam','Africa/Cairo','Asia/Kolkata'])">
-        </div>
-
-    </section>
-
-    <section>
-
-        <table class="clocksTable tableCenter">
+        <table id="countryTimeZoneTableId" class="clocksTable tableCenter">
 
             <thead>
                 <tr>
@@ -130,6 +123,7 @@
             </table>
         </form>
     </section>
+    <script defer src="./clocks.js"></script>
 </body>
 
 </html>
